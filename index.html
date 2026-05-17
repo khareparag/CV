@@ -1448,15 +1448,27 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // Replace paragkhare below with your goatcounter subdomain
 (function loadViewCount(){
   const el = document.getElementById('view-count');
-  const GC_CODE = 'paragkhare'; // <-- replace with your goatcounter subdomain (e.g. 'paragkhare')
-  if (GC_CODE === 'paragkhare') { el.textContent = '—'; return; }
-  fetch(`https://${GC_CODE}.goatcounter.com/counter/TOTAL.json`)
-    .then(r => r.ok ? r.json() : Promise.reject())
-    .then(data => {
-      const v = data?.count_unique ?? data?.count ?? null;
-      el.textContent = v !== null ? Number(v).toLocaleString() : '—';
+  const GC_CODE = 'paragkhare'; // goatcounter subdomain
+  // Try the JSON API first (requires Public access enabled in GoatCounter Settings)
+  fetch('https://' + GC_CODE + '.goatcounter.com/counter/TOTAL.json')
+    .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function(data){
+      var v = (data && (data.count_unique !== undefined ? data.count_unique : data.count));
+      if (v === undefined || v === null) throw new Error('no count');
+      var n = String(v).replace(/,/g, '');
+      el.textContent = (parseInt(n, 10) || 0).toLocaleString('en-US');
     })
-    .catch(() => { el.textContent = '—'; });
+    .catch(function(){
+      // Fallback: embed the public SVG counter as an image (no CORS required)
+      var parent = el.parentNode;
+      var img = document.createElement('img');
+      img.id = 'view-count';
+      img.alt = 'page views';
+      img.style.cssText = 'height:14px;vertical-align:middle';
+      img.onerror = function(){ this.replaceWith(document.createTextNode('—')); };
+      img.src = 'https://' + GC_CODE + '.goatcounter.com/counter/TOTAL.svg?no_origin=1';
+      parent.replaceChild(img, el);
+    });
 })();
 
 // =================== SMOOTH SCROLL FOR ANCHORS ===================
