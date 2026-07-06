@@ -4,15 +4,17 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Parag Khare · Pricing, Procurement & Tender Strategy</title>
-<meta name="description" content="Global Pricing & Tender leader with 12+ years bridging seller and buyer perspectives in logistics. Open to Category Manager, Procurement Manager and Pricing Manager roles across Frankfurt Rhine-Main, Rhein-Neckar, EMEA and Switzerland." />
+<meta name="description" content="Global Pricing & Tender leader with 12+ years bridging seller and buyer perspectives in logistics. Available at short notice for Category Manager, Procurement Manager, Pricing Manager and Tender Manager roles across Frankfurt Rhine-Main, Rhein-Neckar, EMEA and Switzerland." />
 <meta name="author" content="Parag Khare" />
 <meta name="theme-color" content="#0a0e1a" />
+<link rel="canonical" href="https://khareparag.github.io/CV/" />
 
 <!-- Open Graph -->
 <meta property="og:title" content="Parag Khare · Pricing, Procurement & Tender Strategy" />
 <meta property="og:description" content="The Double Agent in Pricing, Procurement & Tender Strategy. 12+ years bridging seller and buyer perspectives in logistics." />
 <meta property="og:type" content="profile" />
-<meta property="og:image" content="og-image.png" />
+<meta property="og:url" content="https://khareparag.github.io/CV/" />
+<meta property="og:image" content="https://khareparag.github.io/CV/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Parag Khare · The Double Agent in Pricing, Procurement & Tender Strategy" />
@@ -25,7 +27,32 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Parag Khare · Pricing, Procurement & Tender Strategy" />
 <meta name="twitter:description" content="The Double Agent in Pricing, Procurement & Tender Strategy. 12+ years bridging seller and buyer perspectives in logistics." />
-<meta name="twitter:image" content="og-image.png" />
+<meta name="twitter:image" content="https://khareparag.github.io/CV/og-image.png" />
+
+<!-- Structured data for Google name search -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Parag Khare",
+  "url": "https://khareparag.github.io/CV/",
+  "image": "https://khareparag.github.io/CV/Headshot.jpg",
+  "jobTitle": "Global Pricing & Tender Manager",
+  "worksFor": { "@type": "Organization", "name": "DB Schenker (now DSV)" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "FOM University of Applied Sciences" },
+    { "@type": "CollegeOrUniversity", "name": "National Institute of Technology Bhopal" }
+  ],
+  "knowsLanguage": ["de", "en", "hi"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Langen (Frankfurt Rhine-Main)", "addressCountry": "DE" },
+  "email": "mailto:khare@gmx.ch",
+  "telephone": "+491601515552",
+  "sameAs": [
+    "https://www.linkedin.com/in/khareparag",
+    "https://github.com/khareparag"
+  ]
+}
+</script>
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -144,6 +171,21 @@ header{
 
 /* Hero */
 .hero{padding:90px 0 70px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:start}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-photo-wrap{order:-1}}
+.hero-photo{
+  width:min(240px,60vw);aspect-ratio:1;object-fit:cover;object-position:top;
+  border-radius:50%;border:2px solid var(--accent);
+  box-shadow:0 0 0 8px rgba(201,169,97,.08), var(--shadow-glow);
+  display:block;
+}
+.hero-photo-wrap{position:relative;padding-top:8px}
+.hero-photo-badge{
+  position:absolute;bottom:6px;left:50%;transform:translateX(-50%);
+  white-space:nowrap;font-size:11px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:#1a1408;background:var(--accent);
+  padding:6px 14px;border-radius:99px;box-shadow:0 6px 18px rgba(201,169,97,.35);
+}
 .eyebrow{
   display:inline-flex;align-items:center;gap:8px;
   font-size:12px;font-weight:500;letter-spacing:.18em;
@@ -423,6 +465,55 @@ footer{
 .foot p{font-size:12.5px;color:var(--text-muted)}
 .foot a{color:var(--accent);text-decoration:none}
 
+/* Featured wins */
+.wins-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.win-card{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:30px 28px;
+  transition:all .25s ease;position:relative;overflow:hidden;
+}
+.win-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent)}
+.win-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow)}
+.win-value{
+  font-family:'Cormorant Garamond',serif;font-weight:700;
+  font-size:52px;line-height:1;color:var(--accent);margin-bottom:12px;
+}
+body[data-lang="zh"] .win-value{font-family:'Noto Sans SC',sans-serif}
+.win-title{font-size:16px;font-weight:600;color:var(--text);margin-bottom:8px}
+.win-body{font-size:14px;color:var(--text-soft);line-height:1.6}
+.win-context{font-size:12px;color:var(--text-muted);margin-top:14px;font-family:'JetBrains Mono',monospace}
+
+/* Testimonials */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}
+@media(max-width:720px){.testi-grid{grid-template-columns:1fr}}
+.testi{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:32px 30px;
+  display:flex;flex-direction:column;gap:18px;
+}
+.testi-quote{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:21px;line-height:1.45;color:var(--text);
+}
+body[data-lang="zh"] .testi-quote{font-family:'Noto Sans SC',sans-serif;font-style:normal;font-size:17px}
+.testi-quote::before{content:'\201C';color:var(--accent);font-size:1.4em;line-height:0;margin-right:2px}
+.testi-source{display:flex;align-items:center;gap:12px;margin-top:auto}
+.testi-source-mark{width:34px;height:34px;border-radius:8px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex-shrink:0}
+.testi-source-mark svg{width:18px;height:18px}
+.testi-org{font-size:14px;font-weight:600;color:var(--text)}
+.testi-doc{font-size:12px;color:var(--text-muted);margin-top:2px}
+.testi-note{font-size:12.5px;color:var(--text-muted);margin-top:18px}
+
+/* Context note (DSV) */
+.context-note{
+  margin-top:22px;padding:16px 20px;
+  background:var(--bg-elev);border:1px solid var(--border);
+  border-left:2px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  font-size:13.5px;color:var(--text-soft);line-height:1.6;
+}
+.context-note a{color:var(--accent);text-decoration:none}
+.context-note a:hover{text-decoration:underline}
+
 /* Scroll reveal */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease, transform .8s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
@@ -486,7 +577,9 @@ footer{
 
   <!-- HERO -->
   <section class="hero container">
-    <div class="eyebrow"><span class="dot"></span><span data-i18n="hero.availability">Open to executive opportunities</span></div>
+    <div class="hero-grid">
+    <div class="hero-main">
+    <div class="eyebrow"><span class="dot"></span><span data-i18n="hero.availability">Available at short notice</span></div>
     <h1>
       Parag Khare
       <span class="credentials">MBA, Ing.</span>
@@ -527,6 +620,13 @@ footer{
         Deutsch
       </a>
     </div>
+    </div><!-- /hero-main -->
+
+    <div class="hero-photo-wrap">
+      <img src="Headshot.jpg" alt="Parag Khare, Global Pricing and Tender Manager" class="hero-photo" width="240" height="240" fetchpriority="high" />
+      <div class="hero-photo-badge" data-i18n="hero.badge">12+ yrs · Seller + Buyer</div>
+    </div>
+    </div><!-- /hero-grid -->
 
     <!-- METRICS -->
     <div class="metrics reveal">
@@ -548,11 +648,95 @@ footer{
       </div>
       <div class="pitch-grid reveal">
         <div class="pitch-body">
-          <p data-i18n="pitch.body1">I operate on both sides of the logistics value chain. Seller-side pricing and tender strategy at <strong>DB Schenker</strong> and <strong>Kuhne + Nagel</strong>. Buyer-side procurement consulting at <strong>Transporeon / TiContract</strong> for 68+ enterprise shippers including Siemens, BMW, Apple, BASF, Nestle and Airbus.</p>
+          <p data-i18n="pitch.body1">I operate on both sides of the logistics value chain. Seller-side pricing and tender strategy at <strong>DB Schenker (now DSV)</strong> and <strong>Kühne + Nagel</strong>. Buyer-side procurement consulting at <strong>Transporeon / TiContract</strong> for 68+ enterprise shippers including Siemens, BMW, Apple, BASF, Nestlé and Airbus.</p>
           <p style="margin-top:16px" data-i18n="pitch.body2">This dual perspective decodes buyer evaluation algorithms and optimises commercial outcomes before submission. I lead cross-functional teams to standardise global RFQ governance, with measurable results.</p>
           <p style="margin-top:16px" data-i18n="pitch.body3">AI-Certified by Google and Microsoft, I deploy prompt engineering and automation to reduce manual effort by 20%.</p>
         </div>
         <div class="pitch-quote" data-i18n="pitch.quote">"Most tender losses are decided before submission. I help organisations see the bid through the buyer's algorithm, then price accordingly."</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGET AREA -->
+  <section id="target">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-tag" data-i18n="target.tag">Availability</div>
+        <h2 data-i18n="target.title">What I am open to</h2>
+        <p data-i18n="target.subtitle">For recruiters and hiring managers, here is the brief in 30 seconds.</p>
+      </div>
+      <div class="target reveal">
+        <dl class="target-grid">
+          <div class="target-block">
+            <dt data-i18n="target.roles">Roles</dt>
+            <dd>
+              <span class="tag" data-i18n="target.role1">Category Manager</span>
+              <span class="tag" data-i18n="target.role2">Buyer</span>
+              <span class="tag" data-i18n="target.role3">Pricing Manager</span>
+              <span class="tag" data-i18n="target.role4">Tendering Manager</span>
+              <span class="tag" data-i18n="target.role5">Procurement Manager</span>
+            </dd>
+          </div>
+          <div class="target-block">
+            <dt data-i18n="target.locTypes">Location types</dt>
+            <dd>
+              <span class="tag" data-i18n="target.locOnsite">On-site</span>
+              <span class="tag" data-i18n="target.locHybrid">Hybrid</span>
+              <span class="tag" data-i18n="target.locRemote">Remote</span>
+            </dd>
+          </div>
+          <div class="target-block">
+            <dt data-i18n="target.onsite">On-site locations</dt>
+            <dd data-i18n="target.onsiteVal">Frankfurt Rhine-Main Metropolitan Area<br>Rhein-Neckar Metropolitan Region</dd>
+          </div>
+          <div class="target-block">
+            <dt data-i18n="target.remote">Remote locations</dt>
+            <dd data-i18n="target.remoteVal">EMEA · Switzerland</dd>
+          </div>
+          <div class="target-block">
+            <dt data-i18n="target.start">Start date</dt>
+            <dd data-i18n="target.startVal">Short notice, following the DSV&ndash;Schenker integration.</dd>
+          </div>
+          <div class="target-block">
+            <dt data-i18n="target.employment">Employment</dt>
+            <dd>
+              <span class="tag" data-i18n="target.empFT">Full-time</span>
+              <span class="tag" data-i18n="target.empCT">Contract</span>
+            </dd>
+          </div>
+        </dl>
+        <div class="context-note" data-i18n="target.context">Market context: DSV completed its acquisition of DB Schenker in April 2025. Corporate-headquarters functions consolidate at DSV's head office in Denmark through 2026, and the 153-year-old Schenker brand is being retired. I chose to remain in the Frankfurt region. Sources: <a href="https://www.dsv.com/en/about-dsv/press/news/com/2025/04/dsv-completes-acquisition-of-schenker" target="_blank" rel="noopener">DSV press release</a> · <a href="https://theloadstar.com/dsv-schenker-leads-job-loss-shocks-as-major-forwarders-go-cost-cutting/" target="_blank" rel="noopener">The Loadstar</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED WINS -->
+  <section id="wins">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-tag" data-i18n="wins.tag">Featured wins</div>
+        <h2 data-i18n="wins.title">Numbers a hiring manager can verify</h2>
+        <p data-i18n="wins.subtitle">Three engagements, three quantified outcomes. Full detail in the CV and in interview.</p>
+      </div>
+      <div class="wins-grid reveal">
+        <div class="win-card">
+          <div class="win-value">$8M+</div>
+          <div class="win-title" data-i18n="win1.title">Deals closed by direct negotiation</div>
+          <div class="win-body" data-i18n="win1.body">Game-theory pricing plus buyer-side insight, applied to global air freight bids.</div>
+          <div class="win-context" data-i18n="win1.context">DB Schenker (now DSV) · 2024&ndash;2026</div>
+        </div>
+        <div class="win-card">
+          <div class="win-value">+15%</div>
+          <div class="win-title" data-i18n="win2.title">Global RFQ win-rate uplift</div>
+          <div class="win-body" data-i18n="win2.body">Standardised bid logic and RFQ governance across all regions.</div>
+          <div class="win-context" data-i18n="win2.context">DB Schenker (now DSV) · Corporate HQ</div>
+        </div>
+        <div class="win-card">
+          <div class="win-value">$1M</div>
+          <div class="win-title" data-i18n="win3.title">Savings negotiated for GE Group</div>
+          <div class="win-body" data-i18n="win3.body">3% cost reduction through structured strategic sourcing on the buyer side.</div>
+          <div class="win-context" data-i18n="win3.context">Transporeon / TiContract · Buyer side</div>
+        </div>
       </div>
     </div>
   </section>
@@ -570,7 +754,7 @@ footer{
         <div class="role-head">
           <div>
             <div class="role-title" data-i18n="role1.title">Global Pricing & Tender Manager</div>
-            <div class="role-company">DB Schenker · Corporate HQ</div>
+            <div class="role-company">DB Schenker (now DSV) · Corporate HQ</div>
           </div>
           <div class="role-meta">
             <div data-i18n="role1.dates">Jan 2024 – Present</div>
@@ -693,55 +877,37 @@ footer{
     </div>
   </section>
 
-  <!-- TARGET AREA -->
-  <section id="target">
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
     <div class="container">
       <div class="section-head reveal">
-        <div class="section-tag" data-i18n="target.tag">Availability</div>
-        <h2 data-i18n="target.title">What I am open to</h2>
-        <p data-i18n="target.subtitle">For recruiters and hiring managers, here is the brief in 30 seconds.</p>
+        <div class="section-tag" data-i18n="testi.tag">References</div>
+        <h2 data-i18n="testi.title">What employers put in writing</h2>
+        <p data-i18n="testi.subtitle">Quoted from official employment references (Arbeitszeugnisse). Documents available on request.</p>
       </div>
-      <div class="target reveal">
-        <dl class="target-grid">
-          <div class="target-block">
-            <dt data-i18n="target.roles">Roles</dt>
-            <dd>
-              <span class="tag" data-i18n="target.role1">Category Manager</span>
-              <span class="tag" data-i18n="target.role2">Buyer</span>
-              <span class="tag" data-i18n="target.role3">Pricing Manager</span>
-              <span class="tag" data-i18n="target.role4">Tendering Manager</span>
-              <span class="tag" data-i18n="target.role5">Procurement Manager</span>
-            </dd>
+      <div class="testi-grid reveal">
+        <div class="testi">
+          <div class="testi-quote" data-i18n="testi1.quote">The performance of Mr. Khare always earns our full recognition in every respect. [&hellip;] He possesses excellent in-depth specialist knowledge even in peripheral fields, which he always applies in a most effective and beneficial manner.</div>
+          <div class="testi-source">
+            <div class="testi-source-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div>
+              <div class="testi-org">Schenker AG (DB Schenker, now DSV)</div>
+              <div class="testi-doc" data-i18n="testi1.doc">Interim employment reference · Essen, March 2026</div>
+            </div>
           </div>
-          <div class="target-block">
-            <dt data-i18n="target.locTypes">Location types</dt>
-            <dd>
-              <span class="tag" data-i18n="target.locOnsite">On-site</span>
-              <span class="tag" data-i18n="target.locHybrid">Hybrid</span>
-              <span class="tag" data-i18n="target.locRemote">Remote</span>
-            </dd>
+        </div>
+        <div class="testi">
+          <div class="testi-quote" data-i18n="testi2.quote">Mr. Khare's performance found our fullest recognition at all times and in every respect. [&hellip;] We deeply regret his departure and gladly continue to recommend him.</div>
+          <div class="testi-source">
+            <div class="testi-source-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div>
+              <div class="testi-org">Kühne + Nagel (AG &amp; Co.) KG</div>
+              <div class="testi-doc" data-i18n="testi2.doc">Employment reference (Arbeitszeugnis) · Hamburg, April 2020</div>
+            </div>
           </div>
-          <div class="target-block">
-            <dt data-i18n="target.onsite">On-site locations</dt>
-            <dd data-i18n="target.onsiteVal">Frankfurt Rhine-Main Metropolitan Area<br>Rhein-Neckar Metropolitan Region</dd>
-          </div>
-          <div class="target-block">
-            <dt data-i18n="target.remote">Remote locations</dt>
-            <dd data-i18n="target.remoteVal">EMEA · Switzerland</dd>
-          </div>
-          <div class="target-block">
-            <dt data-i18n="target.start">Start date</dt>
-            <dd data-i18n="target.startVal">Flexible. Casually looking for the right role.</dd>
-          </div>
-          <div class="target-block">
-            <dt data-i18n="target.employment">Employment</dt>
-            <dd>
-              <span class="tag" data-i18n="target.empFT">Full-time</span>
-              <span class="tag" data-i18n="target.empCT">Contract</span>
-            </dd>
-          </div>
-        </dl>
+        </div>
       </div>
+      <p class="testi-note reveal" data-i18n="testi.note">Quotes translated where the original document is German. Original documents are shared during the application process.</p>
     </div>
   </section>
 
@@ -800,7 +966,7 @@ footer{
         <div class="cert"><div><div class="cert-name" data-i18n="cert1">Analytics Engineer: Data Analyst, ETL Developer & AI</div><div class="cert-issuer">Paris-Sorbonne University</div></div><div class="cert-logos single"><img src="analytics-engineer.png" alt="Analytics Engineer"></div></div>
         <div class="cert"><div><div class="cert-name">Microsoft Power BI PL-900 & PL-300</div><div class="cert-issuer">Microsoft</div></div><div class="cert-logos"><img src="pl-900.png" alt="PL-900"><img src="pl-300.png" alt="PL-300"></div></div>
         <div class="cert"><div><div class="cert-name">Google Analytics 4 & Tag Manager</div><div class="cert-issuer">Google</div></div><div class="cert-logos"><img src="ga4.png" alt="Google Analytics 4"><img src="gtm.png" alt="Google Tag Manager"></div></div>
-        <div class="cert"><div><div class="cert-name" data-i18n="cert2">Air Cargo Strategy, Competitor Analysis, Revenue Optimisation</div><div class="cert-issuer">IATA (3 certifications)</div></div><div class="cert-logos single"><img src="iata.png" alt="IATA"></div></div>
+        <div class="cert"><div><div class="cert-name" data-i18n="cert2">Air Cargo: Fundamentals · Sales · Route Profitability · Customer Service · Business Foundation</div><div class="cert-issuer">IATA · 5 certifications, all with distinction</div></div><div class="cert-logos single"><img src="iata.png" alt="IATA"></div></div>
         <div class="cert"><div><div class="cert-name">Incoterms® 2020</div><div class="cert-issuer">International Chamber of Commerce, Paris</div></div><div class="cert-logos single"><img src="incoterms.png" alt="Incoterms 2020"></div></div>
       </div>
     </div>
@@ -817,6 +983,13 @@ footer{
       <div class="edu-list reveal" style="margin-bottom:28px">
         <div class="edu">
           <div>
+            <div class="edu-school">Analytics Engineer Program · Liora, certified by Paris-Sorbonne University</div>
+            <div class="edu-degree" data-i18n="edu0.degree">Data Analyst · ETL Developer · Data Marketing & AI — full-time, in English</div>
+          </div>
+          <div class="edu-loc" data-i18n="edu0.status">2026 · in progress</div>
+        </div>
+        <div class="edu">
+          <div>
             <div class="edu-school">FOM University of Applied Sciences for Economics & Management</div>
             <div class="edu-degree" data-i18n="edu1.degree">Executive MBA · Logistics & Supply Chain Management</div>
           </div>
@@ -830,6 +1003,8 @@ footer{
           <div class="edu-loc">Bhopal, IN</div>
         </div>
       </div>
+
+      <div class="context-note reveal" style="margin-bottom:28px" data-i18n="edu.project">Capstone in progress: <strong>EU Freight Rate Risk Monitor</strong> — air vs road freight-rate volatility across six EU markets (Eurostat / INSEE, 2003–2024), with a backtested tender-timing rule (75% hit rate across 85 market-years) delivered as a five-tab Power BI monitor. Built to be reused by freight category managers.</div>
 
       <div class="lang-grid reveal">
         <div class="lang-card">
@@ -920,7 +1095,8 @@ const T = {
   en: {
     'nav.subtitle': 'Pricing · Procurement · Tender Strategy',
     'nav.contact': 'Get in touch',
-    'hero.availability': 'Open to executive opportunities',
+    'hero.availability': 'Available at short notice',
+    'hero.badge': '12+ yrs · Seller + Buyer',
     'hero.tagline': 'The Double Agent in Pricing, Procurement & Tender Strategy',
     'hero.subline': '12+ years bridging Seller (Forwarding) and Buyer (Shipper/Platform) perspectives in global logistics. AI-Certified by Google and Microsoft. German citizen.',
     'hero.loc1': 'Frankfurt / Langen, Germany',
@@ -937,7 +1113,7 @@ const T = {
     'metric.years': 'Years across Seller + Buyer',
     'pitch.tag': 'The Pitch',
     'pitch.title': 'Why a Double Agent matters',
-    'pitch.body1': 'I operate on both sides of the logistics value chain. Seller-side pricing and tender strategy at <strong>DB Schenker</strong> and <strong>Kuhne + Nagel</strong>. Buyer-side procurement consulting at <strong>Transporeon / TiContract</strong> for 68+ enterprise shippers including Siemens, BMW, Apple, BASF, Nestle and Airbus.',
+    'pitch.body1': 'I operate on both sides of the logistics value chain. Seller-side pricing and tender strategy at <strong>DB Schenker (now DSV)</strong> and <strong>Kühne + Nagel</strong>. Buyer-side procurement consulting at <strong>Transporeon / TiContract</strong> for 68+ enterprise shippers including Siemens, BMW, Apple, BASF, Nestlé and Airbus.',
     'pitch.body2': 'This dual perspective decodes buyer evaluation algorithms and optimises commercial outcomes before submission. I lead cross-functional teams to standardise global RFQ governance with measurable results.',
     'pitch.body3': 'AI-Certified by Google and Microsoft, I deploy prompt engineering and automation to reduce manual effort by 20%.',
     'pitch.quote': '"Most tender losses are decided before submission. I help organisations see the bid through the buyer\'s algorithm, then price accordingly."',
@@ -1000,7 +1176,28 @@ const T = {
     'target.remote': 'Remote locations',
     'target.remoteVal': 'EMEA · Switzerland',
     'target.start': 'Start date',
-    'target.startVal': 'Flexible. Casually looking for the right role.',
+    'target.startVal': 'Short notice, following the DSV&ndash;Schenker integration.',
+    'target.context': 'Market context: DSV completed its acquisition of DB Schenker in April 2025. Corporate-headquarters functions consolidate at DSV\'s head office in Denmark through 2026, and the 153-year-old Schenker brand is being retired. I chose to remain in the Frankfurt region. Sources: <a href="https://www.dsv.com/en/about-dsv/press/news/com/2025/04/dsv-completes-acquisition-of-schenker" target="_blank" rel="noopener">DSV press release</a> · <a href="https://theloadstar.com/dsv-schenker-leads-job-loss-shocks-as-major-forwarders-go-cost-cutting/" target="_blank" rel="noopener">The Loadstar</a>',
+    'wins.tag': 'Featured wins',
+    'wins.title': 'Numbers a hiring manager can verify',
+    'wins.subtitle': 'Three engagements, three quantified outcomes. Full detail in the CV and in interview.',
+    'win1.title': 'Deals closed by direct negotiation',
+    'win1.body': 'Game-theory pricing plus buyer-side insight, applied to global air freight bids.',
+    'win1.context': 'DB Schenker (now DSV) · 2024&ndash;2026',
+    'win2.title': 'Global RFQ win-rate uplift',
+    'win2.body': 'Standardised bid logic and RFQ governance across all regions.',
+    'win2.context': 'DB Schenker (now DSV) · Corporate HQ',
+    'win3.title': 'Savings negotiated for GE Group',
+    'win3.body': '3% cost reduction through structured strategic sourcing on the buyer side.',
+    'win3.context': 'Transporeon / TiContract · Buyer side',
+    'testi.tag': 'References',
+    'testi.title': 'What employers put in writing',
+    'testi.subtitle': 'Quoted from official employment references (Arbeitszeugnisse). Documents available on request.',
+    'testi1.quote': 'The performance of Mr. Khare always earns our full recognition in every respect. [&hellip;] He possesses excellent in-depth specialist knowledge even in peripheral fields, which he always applies in a most effective and beneficial manner.',
+    'testi1.doc': 'Interim employment reference · Essen, March 2026',
+    'testi2.quote': 'Mr. Khare\'s performance found our fullest recognition at all times and in every respect. [&hellip;] We deeply regret his departure and gladly continue to recommend him.',
+    'testi2.doc': 'Employment reference (Arbeitszeugnis) · Hamburg, April 2020',
+    'testi.note': 'Quotes translated where the original document is German. Original documents are shared during the application process.',
     'target.employment': 'Employment',
     'target.empFT': 'Full-time',
     'target.empCT': 'Contract',
@@ -1015,23 +1212,26 @@ const T = {
     'skill4.title': 'AI-Enabled Process Design',
     'skill4.body': 'Prompt engineering · Automation roadmaps · AI pricing tools · Google & Microsoft AI certified · Manual effort cut by 20%',
     'skill5.title': 'Cross-Functional Leadership',
-    'skill5.body': 'Matrix team leadership · Change management · Coaching & training · Global RFQ training curriculum · Continuous improvement',
+    'skill5.body': 'Matrix team leadership · Change management · Coaching & training · Global RFQ training curriculum · Lean Six Sigma (certified) · Continuous improvement',
     'skill6.title': 'Analytics & Modeling',
     'skill6.body': 'Advanced Excel · Power BI (PL-900 / PL-300) · Google Analytics 4 · Tag Manager · Data analyst & ETL · Market sensing & benchmarking',
     'cert.tag': 'Credentials',
     'cert.title': 'Certifications',
     'cert.subtitle': 'All passed with distinction.',
     'cert1': 'Analytics Engineer: Data Analyst, ETL Developer & AI',
-    'cert2': 'Air Cargo Strategy, Competitor Analysis, Revenue Optimisation',
+    'cert2': 'Air Cargo: Fundamentals · Sales · Route Profitability · Customer Service · Business Foundation',
     'edu.tag': 'Background',
     'edu.title': 'Education & languages',
     'edu1.degree': 'Executive MBA · Logistics & Supply Chain Management',
     'edu2.degree': 'Bachelor of Technology · Transport Planning',
+    'edu0.degree': 'Data Analyst · ETL Developer · Data Marketing & AI — full-time, in English',
+    'edu0.status': '2026 · in progress',
+    'edu.project': 'Capstone in progress: <strong>EU Freight Rate Risk Monitor</strong> — air vs road freight-rate volatility across six EU markets (Eurostat / INSEE, 2003–2024), with a backtested tender-timing rule (75% hit rate across 85 market-years) delivered as a five-tab Power BI monitor. Built to be reused by freight category managers.',
     'lang.de': 'German',
     'lang.en': 'English',
     'lang.hi': 'Hindi',
     'contact.title': "Let's talk",
-    'contact.body': 'For executive recruiters and hiring managers in procurement, pricing or tender leadership, the fastest path is LinkedIn or direct email. Phone calls welcome by appointment.',
+    'contact.body': 'For executive recruiters and hiring managers in procurement, pricing or tender leadership, the fastest path is LinkedIn or direct email. Phone calls welcome by appointment. I reply within 24 hours.',
     'contact.phoneLabel': 'Phone',
     'contact.cvEn': 'Download CV (English)',
     'contact.cvDe': 'CV herunterladen (Deutsch)',
@@ -1041,7 +1241,8 @@ const T = {
   de: {
     'nav.subtitle': 'Pricing · Einkauf · Tender-Strategie',
     'nav.contact': 'Kontakt aufnehmen',
-    'hero.availability': 'Offen für Executive-Opportunitäten',
+    'hero.availability': 'Kurzfristig verfügbar',
+    'hero.badge': '12+ Jahre · Seller + Buyer',
     'hero.tagline': 'Der Double Agent in Pricing, Einkauf & Tender-Management',
     'hero.subline': '12+ Jahre an der Schnittstelle zwischen Spediteur (Seller) und Verlader/Plattform (Buyer) in der globalen Logistik. KI-zertifiziert von Google und Microsoft. Deutscher Staatsbürger.',
     'hero.loc1': 'Frankfurt / Langen, Deutschland',
@@ -1058,7 +1259,7 @@ const T = {
     'metric.years': 'Jahre Seller + Buyer Perspektive',
     'pitch.tag': 'Kurzprofil',
     'pitch.title': 'Warum ein Double Agent entscheidet',
-    'pitch.body1': 'Ich agiere auf beiden Seiten der Logistik-Wertschöpfungskette. Seller-seitige Preis- und Tender-Strategie bei <strong>DB Schenker</strong> und <strong>Kühne + Nagel</strong>. Buyer-seitige Einkaufsberatung bei <strong>Transporeon / TiContract</strong> für 68+ Industrieverlader inkl. Siemens, BMW, Apple, BASF, Nestlé und Airbus.',
+    'pitch.body1': 'Ich agiere auf beiden Seiten der Logistik-Wertschöpfungskette. Seller-seitige Preis- und Tender-Strategie bei <strong>DB Schenker (jetzt DSV)</strong> und <strong>Kühne + Nagel</strong>. Buyer-seitige Einkaufsberatung bei <strong>Transporeon / TiContract</strong> für 68+ Industrieverlader inkl. Siemens, BMW, Apple, BASF, Nestlé und Airbus.',
     'pitch.body2': 'Diese Doppelperspektive dekodiert Bewertungsalgorithmen der Einkaufsplattformen und optimiert Angebote vor Einreichung. Ich führe funktionsübergreifende Teams zur Standardisierung globaler RFQ-Governance mit messbaren Ergebnissen.',
     'pitch.body3': 'KI-zertifiziert von Google und Microsoft, setze ich Prompt Engineering und Automatisierung ein, um manuellen Aufwand um 20% zu reduzieren.',
     'pitch.quote': '"Die meisten Tender werden vor der Einreichung verloren. Ich helfe Organisationen, das Angebot durch den Algorithmus des Einkäufers zu sehen und entsprechend zu preisen."',
@@ -1121,7 +1322,28 @@ const T = {
     'target.remote': 'Remote-Standorte',
     'target.remoteVal': 'EMEA · Schweiz',
     'target.start': 'Eintrittsdatum',
-    'target.startVal': 'Flexibel. Im Stillen auf der Suche nach der richtigen Rolle.',
+    'target.startVal': 'Kurzfristig, im Zuge der DSV&ndash;Schenker-Integration.',
+    'target.context': 'Marktkontext: DSV hat die Übernahme von DB Schenker im April 2025 abgeschlossen. Die Corporate-Headquarter-Funktionen werden bis 2026 am DSV-Hauptsitz in Dänemark gebündelt, die 153 Jahre alte Marke Schenker wird abgelöst. Ich habe mich entschieden, in der Region Frankfurt zu bleiben. Quellen: <a href="https://www.dsv.com/en/about-dsv/press/news/com/2025/04/dsv-completes-acquisition-of-schenker" target="_blank" rel="noopener">DSV-Pressemitteilung</a> · <a href="https://theloadstar.com/dsv-schenker-leads-job-loss-shocks-as-major-forwarders-go-cost-cutting/" target="_blank" rel="noopener">The Loadstar</a>',
+    'wins.tag': 'Ausgewählte Erfolge',
+    'wins.title': 'Zahlen, die ein Hiring Manager prüfen kann',
+    'wins.subtitle': 'Drei Stationen, drei messbare Ergebnisse. Details im Lebenslauf und im Gespräch.',
+    'win1.title': 'Abschlüsse durch Direktverhandlung',
+    'win1.body': 'Spieltheoretisches Pricing plus Buyer-Perspektive in globalen Luftfracht-Ausschreibungen.',
+    'win1.context': 'DB Schenker (jetzt DSV) · 2024&ndash;2026',
+    'win2.title': 'Globale RFQ-Win-Rate gesteigert',
+    'win2.body': 'Bid Logic und RFQ-Governance über alle Regionen standardisiert.',
+    'win2.context': 'DB Schenker (jetzt DSV) · Corporate HQ',
+    'win3.title': 'Einsparung für GE Group verhandelt',
+    'win3.body': '3% Kostenreduktion durch strukturiertes strategisches Sourcing auf der Einkaufsseite.',
+    'win3.context': 'Transporeon / TiContract · Buyer-Seite',
+    'testi.tag': 'Referenzen',
+    'testi.title': 'Was Arbeitgeber schriftlich festhalten',
+    'testi.subtitle': 'Zitate aus offiziellen Arbeitszeugnissen. Dokumente auf Anfrage.',
+    'testi1.quote': 'Die Leistungen von Herrn Khare verdienen stets in jeder Hinsicht unsere volle Anerkennung. [&hellip;] Er verfügt über exzellentes, auch in Randbereichen tiefgehendes Fachwissen, das er stets höchst wirksam und gewinnbringend einsetzt.',
+    'testi1.doc': 'Zwischenzeugnis · Essen, März 2026',
+    'testi2.quote': 'Die Leistungen von Herrn Khare haben allzeit und in jeder Weise unsere vollste Anerkennung gefunden. [&hellip;] Wir bedauern seinen Weggang sehr und empfehlen Herrn Khare gerne weiter.',
+    'testi2.doc': 'Arbeitszeugnis · Hamburg, April 2020',
+    'testi.note': 'Zitate teilweise übersetzt (Schenker-Original auf Englisch). Originaldokumente im Bewerbungsprozess verfügbar.',
     'target.employment': 'Anstellung',
     'target.empFT': 'Vollzeit',
     'target.empCT': 'Freiberuflich',
@@ -1136,23 +1358,26 @@ const T = {
     'skill4.title': 'KI-gestützte Prozessgestaltung',
     'skill4.body': 'Prompt Engineering · Automatisierungs-Roadmaps · KI-Pricing-Tools · Google & Microsoft KI-zertifiziert · Manueller Aufwand −20%',
     'skill5.title': 'Funktionsübergreifende Führung',
-    'skill5.body': 'Matrix-Team-Führung · Change Management · Coaching & Schulung · Globales RFQ-Schulungsprogramm · Kontinuierliche Verbesserung',
+    'skill5.body': 'Matrix-Team-Führung · Change Management · Coaching & Schulung · Globales RFQ-Schulungsprogramm · Lean Six Sigma (zertifiziert) · Kontinuierliche Verbesserung',
     'skill6.title': 'Analytics & Modellierung',
     'skill6.body': 'Advanced Excel · Power BI (PL-900 / PL-300) · Google Analytics 4 · Tag Manager · Data Analyst & ETL · Marktbeobachtung & Benchmarking',
     'cert.tag': 'Qualifikationen',
     'cert.title': 'Zertifizierungen',
     'cert.subtitle': 'Alle mit Auszeichnung bestanden.',
     'cert1': 'Analytics Engineer: Data Analyst, ETL Developer & KI',
-    'cert2': 'Luftfracht-Strategie, Wettbewerbsanalyse, Erlösoptimierung',
+    'cert2': 'Air Cargo: Fundamentals · Sales · Route Profitability · Customer Service · Business Foundation',
     'edu.tag': 'Hintergrund',
     'edu.title': 'Ausbildung & Sprachen',
     'edu1.degree': 'Executive MBA · Logistik & Supply Chain Management',
     'edu2.degree': 'Bachelor of Technology · Verkehrsplanung',
+    'edu0.degree': 'Data Analyst · ETL Developer · Data Marketing & KI — Vollzeit, auf Englisch',
+    'edu0.status': '2026 · laufend',
+    'edu.project': 'Praxisprojekt (laufend): <strong>EU Freight Rate Risk Monitor</strong> — Luft- vs. Straßenfracht-Ratenvolatilität in sechs EU-Märkten (Eurostat / INSEE, 2003–2024), mit backtesteter Tender-Timing-Regel (75% Trefferquote über 85 Markt-Jahre), umgesetzt als fünfseitiger Power-BI-Monitor. Konzipiert für den Einsatz durch Fracht-Category-Manager.',
     'lang.de': 'Deutsch',
     'lang.en': 'Englisch',
     'lang.hi': 'Hindi',
     'contact.title': 'Sprechen wir',
-    'contact.body': 'Für Executive Recruiter und Hiring Manager im Einkauf, Pricing oder Tender-Bereich ist der schnellste Weg LinkedIn oder direkte E-Mail. Telefonate gerne nach Terminvereinbarung.',
+    'contact.body': 'Für Executive Recruiter und Hiring Manager im Einkauf, Pricing oder Tender-Bereich ist der schnellste Weg LinkedIn oder direkte E-Mail. Telefonate gerne nach Terminvereinbarung. Ich antworte innerhalb von 24 Stunden.',
     'contact.phoneLabel': 'Telefon',
     'contact.cvEn': 'CV herunterladen (Englisch)',
     'contact.cvDe': 'Lebenslauf herunterladen (Deutsch)',
@@ -1162,7 +1387,8 @@ const T = {
   fr: {
     'nav.subtitle': 'Pricing · Achats · Stratégie d\'Appels d\'Offres',
     'nav.contact': 'Me contacter',
-    'hero.availability': 'Ouvert aux opportunités executive',
+    'hero.availability': 'Disponible à court préavis',
+    'hero.badge': '12+ ans · Vendeur + Acheteur',
     'hero.tagline': "L'Agent Double en Pricing, Achats et Stratégie d'Appels d'Offres",
     'hero.subline': '12+ années à la croisée des perspectives vendeur (transitaire) et acheteur (chargeur/plateforme) en logistique mondiale. Certifié IA par Google et Microsoft. Citoyen allemand.',
     'hero.loc1': 'Francfort / Langen, Allemagne',
@@ -1179,7 +1405,7 @@ const T = {
     'metric.years': "Années des deux côtés du process",
     'pitch.tag': 'Profil',
     'pitch.title': "Pourquoi un Agent Double change la donne",
-    'pitch.body1': 'Je travaille des deux côtés de la chaîne de valeur logistique. Côté vendeur, stratégie pricing et appels d\'offres chez <strong>DB Schenker</strong> et <strong>Kuehne + Nagel</strong>. Côté acheteur, conseil en achats chez <strong>Transporeon / TiContract</strong> pour 68+ chargeurs industriels dont Siemens, BMW, Apple, BASF, Nestlé et Airbus.',
+    'pitch.body1': 'Je travaille des deux côtés de la chaîne de valeur logistique. Côté vendeur, stratégie pricing et appels d\'offres chez <strong>DB Schenker (devenu DSV)</strong> et <strong>Kühne + Nagel</strong>. Côté acheteur, conseil en achats chez <strong>Transporeon / TiContract</strong> pour 68+ chargeurs industriels dont Siemens, BMW, Apple, BASF, Nestlé et Airbus.',
     'pitch.body2': 'Cette double perspective décode les algorithmes d\'évaluation des plateformes acheteurs et optimise les offres avant soumission. Je dirige des équipes transverses pour standardiser la gouvernance RFQ globale avec des résultats mesurables.',
     'pitch.body3': 'Certifié IA par Google et Microsoft, je déploie le prompt engineering et l\'automatisation pour réduire l\'effort manuel de 20%.',
     'pitch.quote': '"La plupart des appels d\'offres se perdent avant la soumission. J\'aide les organisations à voir l\'offre à travers l\'algorithme de l\'acheteur, puis à fixer le prix en conséquence."',
@@ -1242,10 +1468,31 @@ const T = {
     'target.remote': 'Remote',
     'target.remoteVal': 'EMEA · Suisse',
     'target.start': 'Date de début',
-    'target.startVal': 'Flexible. À l\'écoute pour le bon poste.',
+    'target.startVal': 'Court préavis, dans le cadre de l\'intégration DSV&ndash;Schenker.',
+    'target.context': 'Contexte de marché : DSV a finalisé l\'acquisition de DB Schenker en avril 2025. Les fonctions du siège corporate sont regroupées au siège de DSV au Danemark d\'ici fin 2026, et la marque Schenker, vieille de 153 ans, disparaît. J\'ai choisi de rester dans la région de Francfort. Sources : <a href="https://www.dsv.com/en/about-dsv/press/news/com/2025/04/dsv-completes-acquisition-of-schenker" target="_blank" rel="noopener">Communiqué DSV</a> · <a href="https://theloadstar.com/dsv-schenker-leads-job-loss-shocks-as-major-forwarders-go-cost-cutting/" target="_blank" rel="noopener">The Loadstar</a>',
     'target.employment': 'Type d\'emploi',
     'target.empFT': 'Temps plein',
     'target.empCT': 'Mission / Freelance',
+    'wins.tag': 'Succès clés',
+    'wins.title': 'Des chiffres qu\'un recruteur peut vérifier',
+    'wins.subtitle': 'Trois missions, trois résultats quantifiés. Détails dans le CV et en entretien.',
+    'win1.title': 'Contrats signés en négociation directe',
+    'win1.body': 'Pricing par théorie des jeux et perspective acheteur, appliqués aux appels d\'offres mondiaux de fret aérien.',
+    'win1.context': 'DB Schenker (devenu DSV) · 2024&ndash;2026',
+    'win2.title': 'Hausse du taux de réussite RFQ mondial',
+    'win2.body': 'Bid logic et gouvernance RFQ standardisées sur toutes les régions.',
+    'win2.context': 'DB Schenker (devenu DSV) · Siège corporate',
+    'win3.title': 'Économies négociées pour GE Group',
+    'win3.body': '3% de réduction de coûts via un sourcing stratégique structuré, côté acheteur.',
+    'win3.context': 'Transporeon / TiContract · Côté acheteur',
+    'testi.tag': 'Références',
+    'testi.title': 'Ce que les employeurs écrivent noir sur blanc',
+    'testi.subtitle': 'Citations extraites de certificats de travail officiels (Arbeitszeugnisse). Documents sur demande.',
+    'testi1.quote': 'Les performances de M. Khare méritent à tout moment et à tous égards notre pleine reconnaissance. [&hellip;] Il possède d\'excellentes connaissances spécialisées, approfondies même dans les domaines périphériques, qu\'il applique toujours de la manière la plus efficace et profitable.',
+    'testi1.doc': 'Certificat de travail intermédiaire · Essen, mars 2026',
+    'testi2.quote': 'Les prestations de M. Khare ont trouvé en tout temps et à tous égards notre plus entière reconnaissance. [&hellip;] Nous regrettons vivement son départ et le recommandons volontiers.',
+    'testi2.doc': 'Certificat de travail · Hambourg, avril 2020',
+    'testi.note': 'Citations traduites depuis les originaux allemand et anglais. Documents originaux fournis lors du processus de candidature.',
     'skills.tag': 'Compétences',
     'skills.title': 'Compétences clés',
     'skill1.title': 'Stratégie Pricing & Yield',
@@ -1257,23 +1504,26 @@ const T = {
     'skill4.title': 'Process Design par IA',
     'skill4.body': 'Prompt engineering · Roadmaps d\'automatisation · Outils IA pricing · Certifié IA Google & Microsoft · Effort manuel −20%',
     'skill5.title': 'Leadership Transverse',
-    'skill5.body': 'Leadership équipes matricielles · Conduite du changement · Coaching & formation · Curriculum RFQ global · Amélioration continue',
+    'skill5.body': 'Leadership équipes matricielles · Conduite du changement · Coaching & formation · Curriculum RFQ global · Lean Six Sigma (certifié) · Amélioration continue',
     'skill6.title': 'Analytics & Modélisation',
     'skill6.body': 'Excel avancé · Power BI (PL-900 / PL-300) · Google Analytics 4 · Tag Manager · Data analyst & ETL · Veille marché & benchmarking',
     'cert.tag': 'Qualifications',
     'cert.title': 'Certifications',
     'cert.subtitle': 'Toutes réussies avec mention.',
     'cert1': 'Analytics Engineer : Data Analyst, ETL Developer & IA',
-    'cert2': 'Stratégie Fret Aérien, Analyse Concurrentielle, Optimisation Revenus',
+    'cert2': 'Fret aérien : Fundamentals · Sales · Route Profitability · Customer Service · Business Foundation',
     'edu.tag': 'Parcours',
     'edu.title': 'Formation & langues',
     'edu1.degree': 'Executive MBA · Logistique & Supply Chain Management',
     'edu2.degree': 'Bachelor of Technology · Planification des Transports',
+    'edu0.degree': 'Data Analyst · ETL Developer · Data Marketing & IA — temps plein, en anglais',
+    'edu0.status': '2026 · en cours',
+    'edu.project': 'Projet de fin de formation (en cours) : <strong>EU Freight Rate Risk Monitor</strong> — volatilité des taux de fret aérien vs routier sur six marchés européens (Eurostat / INSEE, 2003–2024), avec une règle de timing d\'appel d\'offres backtestée (75% de réussite sur 85 années-marchés), livrée sous forme de moniteur Power BI à cinq onglets. Conçu pour être réutilisé par les category managers fret.',
     'lang.de': 'Allemand',
     'lang.en': 'Anglais',
     'lang.hi': 'Hindi',
     'contact.title': 'Parlons-en',
-    'contact.body': "Pour recruteurs executive et responsables RH en achats, pricing ou tender, le plus rapide est LinkedIn ou un email direct. Appels téléphoniques bienvenus sur rendez-vous.",
+    'contact.body': "Pour recruteurs executive et responsables RH en achats, pricing ou tender, le plus rapide est LinkedIn ou un email direct. Appels téléphoniques bienvenus sur rendez-vous. Je réponds sous 24 heures.",
     'contact.phoneLabel': 'Téléphone',
     'contact.cvEn': 'Télécharger CV (Anglais)',
     'contact.cvDe': 'Télécharger CV (Allemand)',
@@ -1283,7 +1533,8 @@ const T = {
   zh: {
     'nav.subtitle': '定价 · 采购 · 招标战略',
     'nav.contact': '联系我',
-    'hero.availability': '开放高管职位机会',
+    'hero.availability': '可短期到岗',
+    'hero.badge': '12+年 · 卖方+买方',
     'hero.tagline': '物流定价、采购与招标战略的双向专家',
     'hero.subline': '12年以上贯通承运方（货代）与货主/平台（采购方）双向视角的全球物流经验。Google与微软AI认证。德国公民。',
     'hero.loc1': '德国 法兰克福 / 朗根',
@@ -1300,7 +1551,7 @@ const T = {
     'metric.years': '兼具卖方与买方经验的年数',
     'pitch.tag': '简介',
     'pitch.title': '双向专家的价值',
-    'pitch.body1': '我在物流价值链两端同时运作。卖方侧担任 <strong>DB Schenker</strong> 与 <strong>Kuehne + Nagel</strong> 的定价与招标战略负责人。买方侧在 <strong>Transporeon / TiContract</strong> 为68+家工业货主（包括西门子、宝马、苹果、巴斯夫、雀巢、空客）提供采购咨询。',
+    'pitch.body1': '我在物流价值链两端同时运作。卖方侧担任 <strong>DB Schenker（现DSV）</strong> 与 <strong>Kühne + Nagel</strong> 的定价与招标战略负责人。买方侧在 <strong>Transporeon / TiContract</strong> 为68+家工业货主（包括西门子、宝马、苹果、巴斯夫、雀巢、空客）提供采购咨询。',
     'pitch.body2': '这种双向视角能够解码采购平台的评估算法，在投标前优化商业方案。我领导跨职能团队推行全球RFQ治理标准化，成果可衡量。',
     'pitch.body3': '凭借Google与微软的AI认证，我运用提示工程和自动化将人工成本降低20%。',
     'pitch.quote': '"大多数招标在投标前就已决定胜负。我帮助组织透过采购方的算法看待报价，然后据此定价。"',
@@ -1363,10 +1614,31 @@ const T = {
     'target.remote': '远程地区',
     'target.remoteVal': 'EMEA · 瑞士',
     'target.start': '入职时间',
-    'target.startVal': '灵活。低调寻找合适机会。',
+    'target.startVal': '可短期到岗，因DSV与Schenker整合。',
+    'target.context': '市场背景：DSV已于2025年4月完成对DB Schenker的收购。集团总部职能将于2026年底前整合至DSV丹麦总部，拥有153年历史的Schenker品牌即将退出。我选择留在法兰克福地区。来源：<a href="https://www.dsv.com/en/about-dsv/press/news/com/2025/04/dsv-completes-acquisition-of-schenker" target="_blank" rel="noopener">DSV官方公告</a> · <a href="https://theloadstar.com/dsv-schenker-leads-job-loss-shocks-as-major-forwarders-go-cost-cutting/" target="_blank" rel="noopener">The Loadstar</a>',
     'target.employment': '雇佣形式',
     'target.empFT': '全职',
     'target.empCT': '合同/项目',
+    'wins.tag': '代表性成果',
+    'wins.title': '招聘方可核实的数字',
+    'wins.subtitle': '三段经历，三项量化成果。详情见简历与面谈。',
+    'win1.title': '直接谈判促成的交易',
+    'win1.body': '将博弈论定价与买方视角应用于全球空运投标。',
+    'win1.context': 'DB Schenker（现DSV） · 2024&ndash;2026',
+    'win2.title': '全球RFQ中标率提升',
+    'win2.body': '跨区域标准化投标逻辑与RFQ治理。',
+    'win2.context': 'DB Schenker（现DSV） · 集团总部',
+    'win3.title': '为GE集团谈判达成的节省',
+    'win3.body': '通过结构化战略寻源实现3%成本降幅（买方侧）。',
+    'win3.context': 'Transporeon / TiContract · 买方侧',
+    'testi.tag': '推荐与评价',
+    'testi.title': '雇主白纸黑字的评价',
+    'testi.subtitle': '摘自正式工作证明（Arbeitszeugnis）。文件可应要求提供。',
+    'testi1.quote': 'Khare先生的工作表现始终在各方面赢得我们的充分认可。[&hellip;] 他拥有卓越且深入的专业知识（包括相邻领域），并始终以最有效、最有益的方式加以运用。',
+    'testi1.doc': '中期工作证明 · 埃森，2026年3月',
+    'testi2.quote': 'Khare先生的工作表现始终在各方面获得我们最充分的认可。[&hellip;] 我们对他的离开深感遗憾，并乐于继续推荐他。',
+    'testi2.doc': '工作证明 · 汉堡，2020年4月',
+    'testi.note': '引文由德语及英语原件翻译而来；原件在应聘过程中提供。',
     'skills.tag': '能力',
     'skills.title': '核心能力',
     'skill1.title': '定价与收益战略',
@@ -1378,23 +1650,26 @@ const T = {
     'skill4.title': 'AI赋能的流程设计',
     'skill4.body': '提示工程 · 自动化路线图 · AI定价工具 · Google与微软AI认证 · 人工成本−20%',
     'skill5.title': '跨职能领导力',
-    'skill5.body': '矩阵团队领导 · 变革管理 · 教练与培训 · 全球RFQ培训课程 · 持续改进',
+    'skill5.body': '矩阵团队领导 · 变革管理 · 教练与培训 · 全球RFQ培训课程 · 精益六西格玛（认证） · 持续改进',
     'skill6.title': '分析与建模',
     'skill6.body': 'Excel高阶 · Power BI（PL-900 / PL-300） · Google Analytics 4 · Tag Manager · 数据分析师与ETL · 市场洞察与基准化',
     'cert.tag': '资质',
     'cert.title': '认证',
     'cert.subtitle': '全部以优异成绩通过。',
     'cert1': '分析工程师：数据分析、ETL开发与AI',
-    'cert2': '航空货运战略、竞争分析、收益优化',
+    'cert2': '航空货运：基础 · 销售 · 航线盈利 · 客户服务 · 货运商业基础',
     'edu.tag': '背景',
     'edu.title': '教育背景与语言',
     'edu1.degree': '高级工商管理硕士（EMBA） · 物流与供应链管理',
     'edu2.degree': '工程学士 · 交通规划',
+    'edu0.degree': '数据分析师 · ETL开发 · 数据营销与AI — 全日制，英语授课',
+    'edu0.status': '2026 · 进行中',
+    'edu.project': '结业项目（进行中）：<strong>欧盟运价风险监测（EU Freight Rate Risk Monitor）</strong> — 基于Eurostat / INSEE数据（2003–2024）分析六个欧盟市场的空运与公路运价波动，包含经回测的招标时机规则（85个市场年中75%命中率），交付为五页Power BI监测面板。为货运品类经理设计，可直接复用。',
     'lang.de': '德语',
     'lang.en': '英语',
     'lang.hi': '印地语',
     'contact.title': '欢迎沟通',
-    'contact.body': '猎头与采购、定价或招标领导岗位的招聘经理，最快路径是LinkedIn或直接邮件。电话沟通请预约。',
+    'contact.body': '猎头与采购、定价或招标领导岗位的招聘经理，最快路径是LinkedIn或直接邮件。电话沟通请预约。我将在24小时内回复。',
     'contact.phoneLabel': '电话',
     'contact.cvEn': '下载简历（英文）',
     'contact.cvDe': '下载简历（德文）',
