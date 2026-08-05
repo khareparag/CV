@@ -464,6 +464,7 @@ footer{
   box-shadow:0 0 8px var(--success);animation:pulse 2s ease infinite;
 }
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+@keyframes ping{0%{transform:scale(1);opacity:.75}80%,100%{transform:scale(2.6);opacity:0}}
 .foot p{font-size:12.5px;color:var(--text-muted)}
 .foot a{color:var(--accent);text-decoration:none}
 
@@ -605,7 +606,7 @@ body[data-lang="ja"] .pitch-quote, body[data-lang="ja"] .testi-quote{font-family
   <section class="hero container">
     <div class="hero-grid">
     <div class="hero-main">
-    <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start"><a class="eyebrow" href="https://rfq.ch/projects/air-benchmark/" style="text-decoration:none"><span class="dot" style="background:#ff4545;box-shadow:0 0 12px #ff4545;animation:pulse 1.2s ease-in-out infinite"></span>LIVE · Parag's AI-Native Airfreight Benchmarking Engine →</a></div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start"><a class="eyebrow" href="https://rfq.ch/projects/air-benchmark/" style="text-decoration:none"><span style="position:relative;display:inline-flex;width:10px;height:10px;flex:none"><span style="position:absolute;inset:0;border-radius:50%;background:#ff4545;opacity:.75;animation:ping 1.6s cubic-bezier(0,0,.2,1) infinite"></span><span class="dot" style="position:relative;width:10px;height:10px;background:#ff4545;box-shadow:0 0 14px #ff4545;animation:pulse 1.2s ease-in-out infinite"></span></span>LIVE · Parag's AI-Native Airfreight Benchmarking Engine →</a></div>
     <h1>
       Parag Khare
       <span class="credentials">MBA, Ing.</span>
@@ -742,7 +743,7 @@ body[data-lang="ja"] .pitch-quote, body[data-lang="ja"] .testi-quote{font-family
       <div class="section-head reveal">
         <div class="section-tag" data-i18n="wins.tag">Featured wins</div>
         <h2 data-i18n="wins.title">Numbers a hiring manager can verify</h2>
-        <p data-i18n="wins.subtitle">Three engagements, three quantified outcomes, and one shipped product. Full detail in the CV and in interview.</p>
+        <p data-i18n="wins.subtitle">Three engagements, three quantified outcomes, and two shipped products. Full detail in the CV and in interview.</p>
       </div>
       <div class="wins-grid reveal">
         <div class="win-card">
@@ -765,9 +766,9 @@ body[data-lang="ja"] .pitch-quote, body[data-lang="ja"] .testi-quote{font-family
         </div>
         <a class="win-card" href="https://rfq.ch/projects/air-benchmark/" style="text-decoration:none;display:block">
           <div class="win-value">LIVE</div>
-          <div class="win-title">Parag's AI-Native Airfreight Benchmarking Engine</div>
-          <div class="win-body">Built and shipped: 20 observed air lanes, six corridor indices, live cost feeds. Running on this site.</div>
-          <div class="win-context">Personal build · 2026 · air.rfq.ch →</div>
+          <div class="win-title">Parag's AI-Native Freight Benchmarking Engines</div>
+          <div class="win-body">Built and shipped: two live engines. 20 observed air lanes with six corridor indices, 45 road lanes with cost floors, live cost feeds. Running on this site.</div>
+          <div class="win-context">Personal build · 2026 · air.rfq.ch + road.rfq.ch →</div>
         </a>
       </div>
     </div>
@@ -1038,7 +1039,7 @@ body[data-lang="ja"] .pitch-quote, body[data-lang="ja"] .testi-quote{font-family
           <a href="https://rfq.ch/projects/tender-timing/" target="_blank" rel="noopener" style="display:block;background:var(--bg-elev);border:1px solid var(--border);border-left:2px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:16px 18px;text-decoration:none"><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-family:'JetBrains Mono',monospace">For Buyer / Category / Procurement Management</div><div style="font-size:14px;font-weight:600;color:var(--text);margin-top:7px;line-height:1.45">When to Tender, How Wide to Budget <span style="color:var(--accent)">→</span></div></a>
           <a href="https://rfq.ch/projects/pricing-volatility/" target="_blank" rel="noopener" style="display:block;background:var(--bg-elev);border:1px solid var(--border);border-left:2px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:16px 18px;text-decoration:none"><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-family:'JetBrains Mono',monospace">For LSP Pricing & Tender Desks</div><div style="font-size:14px;font-weight:600;color:var(--text);margin-top:7px;line-height:1.45">Pricing Under Volatility: The Trough-Lock Edge <span style="color:var(--accent)">→</span></div></a>
           <a href="https://rfq.ch/projects/freight-rate-stream/" target="_blank" rel="noopener" style="display:block;background:var(--bg-elev);border:1px solid var(--border);border-left:2px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:16px 18px;text-decoration:none"><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-family:'JetBrains Mono',monospace">For Forward Deployed Engineering and Platform Teams</div><div style="font-size:14px;font-weight:600;color:var(--text);margin-top:7px;line-height:1.45">From Batch Study to Live Signal: the Streaming Monitor <span style="color:var(--accent)">→</span></div></a>
-          <a href="https://rfq.ch/projects/air-benchmark/" target="_blank" rel="noopener" style="display:block;background:var(--bg-elev);border:1px solid var(--border);border-left:2px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:16px 18px;text-decoration:none"><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-family:'JetBrains Mono',monospace">For Airfreight Buyers & Pricing Desks</div><div style="font-size:14px;font-weight:600;color:var(--text);margin-top:7px;line-height:1.45">Parag's AI-Native Airfreight Benchmarking Engine <span style="color:var(--accent)">→</span></div></a>
+          <a href="https://rfq.ch/projects/air-benchmark/" target="_blank" rel="noopener" style="display:block;background:var(--bg-elev);border:1px solid var(--border);border-left:2px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:16px 18px;text-decoration:none"><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-family:'JetBrains Mono',monospace">For Airfreight Buyers & Pricing Desks</div><div style="font-size:14px;font-weight:600;color:var(--text);margin-top:7px;line-height:1.45">Parag's AI-Native Airfreight Benchmarking Engine <span style="color:var(--accent)">→</span></div></a><a href="https://rfq.ch/projects/road-benchmark/" target="_blank" rel="noopener" style="display:block;background:var(--bg-elev);border:1px solid var(--border);border-left:2px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:16px 18px;text-decoration:none"><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-family:'JetBrains Mono',monospace">For Road Freight Buyers & Carriers</div><div style="font-size:14px;font-weight:600;color:var(--text);margin-top:7px;line-height:1.45">Parag's AI-Native Road Freight Benchmarking Engine <span style="color:var(--accent)">→</span></div></a>
         </div>
         </div>
         <div class="edu">
@@ -1232,7 +1233,7 @@ const T = {
     'target.context': 'Market context: DSV completed its acquisition of DB Schenker in April 2025. Corporate-headquarters functions consolidate at DSV\'s head office in Denmark through 2026, and the 153-year-old Schenker brand is being retired. I chose to remain in the Frankfurt region. Sources: <a href="https://www.deutschebahn.com/en/presse/press_releases/Deutsche-Bahn-completes-sale-of-logistics-subsidiary-DB-Schenker-to-DSV-13370926" target="_blank" rel="noopener">Deutsche Bahn press release</a> · <a href="https://www.reuters.com/markets/deals/freight-forwarder-dsv-buys-deutsche-bahns-schenker-159-billion-2024-09-13/" target="_blank" rel="noopener">Reuters</a>',
     'wins.tag': 'Featured wins',
     'wins.title': 'Numbers a hiring manager can verify',
-    'wins.subtitle': 'Three engagements, three quantified outcomes, and one shipped product. Full detail in the CV and in interview.',
+    'wins.subtitle': 'Three engagements, three quantified outcomes, and two shipped products. Full detail in the CV and in interview.',
     'win1.title': 'Deals closed by direct negotiation',
     'win1.body': 'Game-theory pricing plus buyer-side insight, applied to global air freight bids.',
     'win1.context': 'DB Schenker (now DSV) · 2024&ndash;2026',
@@ -1381,7 +1382,7 @@ const T = {
     'target.context': 'Marktkontext: DSV hat die Übernahme von DB Schenker im April 2025 abgeschlossen. Die Corporate-Headquarter-Funktionen werden bis 2026 am DSV-Hauptsitz in Dänemark gebündelt, die 153 Jahre alte Marke Schenker wird abgelöst. Ich habe mich entschieden, in der Region Frankfurt zu bleiben. Quellen: <a href="https://www.deutschebahn.com/en/presse/press_releases/Deutsche-Bahn-completes-sale-of-logistics-subsidiary-DB-Schenker-to-DSV-13370926" target="_blank" rel="noopener">Deutsche-Bahn-Pressemitteilung</a> · <a href="https://www.reuters.com/markets/deals/freight-forwarder-dsv-buys-deutsche-bahns-schenker-159-billion-2024-09-13/" target="_blank" rel="noopener">Reuters</a>',
     'wins.tag': 'Ausgewählte Erfolge',
     'wins.title': 'Zahlen, die ein Hiring Manager prüfen kann',
-    'wins.subtitle': 'Drei Stationen, drei messbare Ergebnisse und ein live geschaltetes Produkt. Details im Lebenslauf und im Gespräch.',
+    'wins.subtitle': 'Drei Stationen, drei messbare Ergebnisse und zwei live geschaltete Produkte. Details im Lebenslauf und im Gespräch.',
     'win1.title': 'Abschlüsse durch Direktverhandlung',
     'win1.body': 'Spieltheoretisches Pricing plus Buyer-Perspektive in globalen Luftfracht-Ausschreibungen.',
     'win1.context': 'DB Schenker (jetzt DSV) · 2024&ndash;2026',
@@ -1533,7 +1534,7 @@ const T = {
     'target.empCT': 'Mission / Freelance',
     'wins.tag': 'Succès clés',
     'wins.title': 'Des chiffres qu\'un recruteur peut vérifier',
-    'wins.subtitle': 'Trois missions, trois résultats quantifiés et un produit en ligne. Détails dans le CV et en entretien.',
+    'wins.subtitle': 'Trois missions, trois résultats quantifiés et deux produits en ligne. Détails dans le CV et en entretien.',
     'win1.title': 'Contrats signés en négociation directe',
     'win1.body': 'Pricing par théorie des jeux et perspective acheteur, appliqués aux appels d\'offres mondiaux de fret aérien.',
     'win1.context': 'DB Schenker (devenu DSV) · 2024&ndash;2026',
@@ -1682,7 +1683,7 @@ const T = {
     'target.empCT': '合同/项目',
     'wins.tag': '代表性成果',
     'wins.title': '招聘方可核实的数字',
-    'wins.subtitle': '三段经历，三项量化成果，以及一个已上线的产品。详情见简历与面谈。',
+    'wins.subtitle': '三段经历，三项量化成果，以及两个已上线的产品。详情见简历与面谈。',
     'win1.title': '直接谈判促成的交易',
     'win1.body': '将博弈论定价与买方视角应用于全球空运投标。',
     'win1.context': 'DB Schenker（现DSV） · 2024&ndash;2026',
@@ -1831,7 +1832,7 @@ const T = {
     'target.empCT': '계약직',
     'wins.tag': '대표 성과',
     'wins.title': '채용 담당자가 검증할 수 있는 숫자',
-    'wins.subtitle': '세 개의 프로젝트, 세 가지 정량 성과, 그리고 하나의 라이브 제품. 상세 내용은 이력서와 면접에서.',
+    'wins.subtitle': '세 개의 프로젝트, 세 가지 정량 성과, 그리고 두 개의 라이브 제품. 상세 내용은 이력서와 면접에서.',
     'win1.title': '직접 협상으로 성사된 거래',
     'win1.body': '게임이론 프라이싱과 구매자 측 인사이트를 글로벌 항공화물 입찰에 적용.',
     'win1.context': 'DB Schenker(현 DSV) · 2024&ndash;2026',
@@ -1980,7 +1981,7 @@ const T = {
     'target.empCT': '契約',
     'wins.tag': '主要実績',
     'wins.title': '採用担当者が検証できる数字',
-    'wins.subtitle': '3つの案件、3つの定量成果、そして1つの公開済みプロダクト。詳細は履歴書と面接にて。',
+    'wins.subtitle': '3つの案件、3つの定量成果、そして2つの公開済みプロダクト。詳細は履歴書と面接にて。',
     'win1.title': '直接交渉による成約',
     'win1.body': 'ゲーム理論プライシングと買い手側の知見をグローバル航空貨物入札に適用。',
     'win1.context': 'DB Schenker（現DSV） · 2024&ndash;2026',
