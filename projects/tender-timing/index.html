@@ -96,6 +96,30 @@ article strong{color:var(--head);font-weight:600}
   line-height:1.9;
 }
 .links p+p{margin-top:6px}
+.embed{
+  margin:44px 0 0;
+  width:min(1024px, calc(100vw - 48px));
+  position:relative;left:50%;transform:translateX(-50%);
+}
+.embed-frame{
+  position:relative;
+  padding-top:59.77%;
+  border:1px solid rgba(201,169,97,.35);
+  background:var(--card);
+}
+.embed-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.embed figcaption{margin-top:12px;color:var(--dim);font-size:13.5px;text-align:center;line-height:1.5}
+.embed-fallback{display:none}
+@media(max-width:760px){
+  .embed{width:auto;position:static;left:auto;transform:none;margin-top:34px}
+  .embed-frame{display:none}
+  .embed-fallback{
+    display:block;text-align:center;text-decoration:none;
+    border:1px solid rgba(201,169,97,.35);background:var(--card);
+    padding:22px 20px;color:var(--gold);font-size:15px;letter-spacing:.3px;
+  }
+  .embed-fallback span{display:block;color:var(--dim);font-size:13px;margin-top:6px;letter-spacing:0}
+}
 .foot-note{
   margin-top:44px;
   padding-top:24px;
@@ -149,11 +173,18 @@ footer a:hover{color:var(--gold)}
     <figure style="margin:28px 0 0"><img src="hero-tender-timing.webp" alt="Abstract artwork: gold calendar grid on deep navy with one glowing window and a rate curve dipping through it" style="width:100%;height:auto;border-radius:8px;border:1px solid rgba(201,169,97,.25);display:block" loading="lazy" /></figure>
     <article>
       <p>Every freight category plan answers two questions, usually by habit: when do we go to market, and how much room does the budget leave? I answered both with twenty years of official EU rate data.</p>
-      <p>The study is my <strong>EU Freight Rate Risk Monitor</strong>: air versus road freight rates across six EU markets (Germany, Italy, Spain, Netherlands, Poland, France), self-built on open Eurostat and INSEE series covering 2003 to 2024. Every claim below is backed by a statistical test in the published study.</p>
+      <p>The study is my <strong>EU Freight Rate Risk Monitor</strong>: air versus road freight rates across six EU markets (Germany, Italy, Spain, Netherlands, Poland, France), self-built on open Eurostat and INSEE series covering 2005 to 2024. Every claim below is backed by a statistical test in the published study.</p>
       <p><strong>Budget air as a band, not a point.</strong> In a typical year air rates move inside a 7.0% band; road moves 2.6%. On 10 million euro of air spend that band is roughly 703,000 euro of rate movement a budget owner either plans for or explains later. Road's narrow band is why it holds longer fixed terms comfortably; air wants shorter agreements, indexation, or both.</p>
       <p><strong>Tender into the trough.</strong> Air peaks in Q2, climbing about 3.2% into the spring quarter. Across 85 backtested market-years, locking air at trough-season levels (Q4 to Q1) beat peak-season locks in 75% of years, average edge 1.8% - in Germany, 8 years of 9. On the same 10 million euro, timing alone is worth roughly 180,000 euro. Out of sample, the Q2 climb repeated in 10 of 12 market-years across 2024 and 2025.</p>
       <p><strong>Respect the exceptions.</strong> The rule is not uniform, and this is the point. In Poland road is the volatile mode, not air. In France the timing rule fails (44% hit rate on the freight-only series). The study therefore ships with per-lane validation: segment by market, validate the lane, then contract.</p>
-      <p>The delivered dashboard is a nine-sheet Power BI monitor, verdict to actions, with a live spend what-if: set the air spend, read the band in euros. A self-built live monitor carries the same tests and refreshes each quarter from the public sources, so the rules stay current instead of aging in a slide deck.</p>
+      <p>The delivered dashboard is a ten-sheet Power BI monitor, verdict to actions. The timing sheet is below. A self-built live monitor carries the same tests and refreshes each quarter from the public sources, so the rules stay current instead of aging in a slide deck.</p>
+      <figure class="embed">
+        <div class="embed-frame">
+          <iframe title="Rate Risk Monitor, timing sheet" src="https://app.powerbi.com/view?r=eyJrIjoiMjMxOTdkMjEtOTRiYi00MjJlLTgzNWQtNDQxNGQ4NDlmZDU5IiwidCI6IjYzNWM3N2Y5LTkxM2ItNDU5YS1hMmU5LWEzYTY3ZDFkNTIxMiJ9&amp;pageName=ReportSection1fd3d098cbed7f94383680d4" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <a class="embed-fallback" href="https://app.powerbi.com/view?r=eyJrIjoiMjMxOTdkMjEtOTRiYi00MjJlLTgzNWQtNDQxNGQ4NDlmZDU5IiwidCI6IjYzNWM3N2Y5LTkxM2ItNDU5YS1hMmU5LWEzYTY3ZDFkNTIxMiJ9&amp;pageName=ReportSection1fd3d098cbed7f94383680d4">Open the timing sheet &rarr;<span>Ten sheets. Best viewed on a wider screen.</span></a>
+        <figcaption>Sheet 05, Timing. Air falls 0.97 percent in Q1 and climbs 3.20 percent in Q2. The page tabs along the bottom carry the other nine sheets.</figcaption>
+      </figure>
       <p>Since July 2026 the study also runs in motion: a streaming extension watches the same bands live and fires a rate-shock alert the moment a market breaks its pattern. Replayed over 2019-2022, the 2020 air spike fires alerts exactly where the study's charts show it.</p>
       <p>Why this exists: twelve-plus years in freight pricing, tendering and procurement, seller and buyer side, including tender platform work for 68+ enterprise shippers. The monitor is built to be reused by freight category managers, not read once.</p>
       <div class="links">
